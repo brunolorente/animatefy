@@ -1,0 +1,107 @@
+/*
+ * Anymatefy CSS
+ * Description: Animatefy is a CSS/JS plugin that makes easy get beautiful animations for your website
+ * Version: 0.1
+ * Author: Bruno Lorente Cantarero
+ * Author URI: http://brunolorente.com
+ */
+
+@keyframes scroll-top-fade{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes scroll-fade-left{
+    0%{
+        opacity: 0;
+        transform: translateX(500px);
+    }
+    80%{
+        opacity: .7;
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes scroll-fade-right{
+    0%{
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+    80%{
+        opacity: .7;
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes scroll-hop{
+    0%{
+        transform:  rotate3d(0,0,0, 30deg)
+    }
+
+    50%{
+        transform: rotate3d(1,-2,0, 30deg) scale(1.1) skew(-10deg);
+        -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+    }
+    
+    100%{
+        transform:  rotate3d(0,0,0, 30deg)
+    }
+}
+
+@keyframes scroll-twist{
+    0%{
+        opacity: 0;
+        transform: scale(.7);
+    }
+    
+    50%{
+        transform: rotate(720deg) scale(1.3);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: rotate(1440deg) scale(1);
+    }
+}
+
+.go-sticky-nav{
+    top: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+.animatefy-fade{
+    animation: scroll-top-fade ease-in-out 0.3s 1 forwards;
+}
+
+.animatefy-fade-left{
+    animation: scroll-fade-left ease-in-out 0.9s 1 forwards;
+}
+
+.animatefy-fade-right{
+    animation: scroll-fade-right ease-in-out 0.9s 1 forwards;
+}
+
+.animatefy-scroll-hop{
+    animation: scroll-hop ease-in-out 1s 1 forwards;
+}
+
+.animatefy-rotate{
+    animation: scroll-twist ease-out 2s 1 forwards;
+}
