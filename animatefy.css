@@ -1,3 +1,4 @@
+
 /*
  * Anymatefy CSS
  * Description: Animatefy is a CSS/JS plugin that makes easy get beautiful animations for your website
@@ -6,102 +7,586 @@
  * Author URI: http://brunolorente.com
  */
 
-@keyframes scroll-top-fade{
-    0%{
+
+/*
+ * - HOVER ANIMATIONS 
+ * - Basic settings
+ */
+
+[class*="afy-hover-"] {
+    transition: ease-in-out;
+    -webkit-transition: ease-in-out;
+    
+}
+
+
+/* 
+ * 2D
+ * - Animatefy Hover "Skew" 
+ */
+.afy-hover-skew {
+    transform-origin: 0 100%;
+}
+.hovered.afy-hover-skew {
+    transform: skew(-8deg);
+}
+
+/* 
+ * 2D
+ * - Animatefy Hover "Go Up"
+ */
+.hovered.afy-hover-goup{
+    transform: translateY(-8px);
+}
+
+/* 
+ * 2D
+ * - Animatefy Hover "Go Down"
+ */
+.hovered.afy-hover-godown{
+    transform: translateY(8px);
+}
+
+/* 
+ * 2D
+ * - Animatefy Hover "Sneeze"
+ */
+.hovered.afy-hover-sneeze{
+    animation-name: afy-sneeze;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+@keyframes afy-sneeze {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* 
+ * 2D
+ * - Animatefy Hover "Sneeze Down"
+ */
+.afy-hover-sneezedown {
+    transform-origin: 100% 0;
+}
+.hovered.afy-hover-sneezedown{
+    animation-name: afy-sneezedown;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+@keyframes afy-sneezedown {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+
+
+/* 
+ * 2D
+ * - Animatefy Hover "Leaf Down"
+ */
+.afy-hover-leafsquare {
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+}
+.hovered.afy-hover-leafsquare {
+/*    border-radius: 50px;*/
+    border-top-left-radius:5px; 
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 5px;
+}
+
+/* 
+ * 2D
+ * - Animatefy Hover "Rounded Down"
+ */
+.afy-hover-roundedsquare {
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+}
+.hovered.afy-hover-roundedsquare {
+    border-radius: 50px;
+}
+
+/* 
+ * Background Animations
+ * - Animatefy Hover "Slide Right"
+ */
+.afy-hover-slideright {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+}
+.afy-hover-slideright:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2FA1F1;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    transform-origin: 0 50%;
+    -webkit-transform-origin: 0 50%;
+    transition-property: transform;
+    -webkit-transition-property: transform;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out;
+  
+}
+
+.hovered.afy-hover-slideright:hover:before, 
+.hovered.afy-hover-slideright:focus:before, 
+.hovered.afy-hover-slideright:active:before {
+    transform: scaleX(1);
+}
+
+/* 
+ * Background Animations
+ * - Animatefy Hover "Slide Left"
+ */
+.afy-hover-slideleft {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+}
+.afy-hover-slideleft:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2FA1F1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hovered.afy-hover-slideleft:hover:before, 
+.hovered.afy-hover-slideleft:focus:before, 
+.hovered.afy-hover-slideleft:active:before {
+  transform: scaleX(1);
+}
+
+/* 
+ * Background Animations
+ * - Animatefy Hover "Slide Out"
+ */
+.afy-hover-slideout {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+}
+.afy-hover-slideout:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2FA1F1;
+  transform: scaleX(0);
+  transform-origin: 50% 0;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.hovered.afy-hover-slideout:hover:before, 
+.hovered.afy-hover-slideout:focus:before, 
+.hovered.afy-hover-slideout:active:before {
+  transform: scaleX(1);
+}
+
+/*
+ * Background Animations
+ * - Animatefy Hover "Fade"
+ */
+.afy-hover-fade {
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+.hovered.afy-hover-fade:hover, 
+.hovered.afy-hover-fade:focus, 
+.hovered.afy-hover-fade:active {
+    background-color: #2FA1F1;
+}
+
+/*
+ * Background Animations
+ * - Animatefy Hover "Angle Out"
+ */
+.afy-hover-angleout {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+}
+.afy-hover-angleout:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2FA1F1;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hovered.afy-hover-angleout:hover:before, 
+.hovered.afy-hover-angleout:focus:before, 
+.hovered.afy-hover-angleout:active:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* 
+ * Gradient Animations
+ * - Animatefy "Gradient Fade"
+ */
+
+.afy-hover-gradientfade {
+    position: relative;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+}
+.afy-hover-gradientfade:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hovered.afy-hover-gradientfade:hover:before,
+.hovered.afy-hover-gradientfade:focus:before,
+.hovered.afy-hover-gradientfade:active:before {
+    opacity: 1;
+}
+
+/* 
+ * Gradient Animations
+ * - Animatefy "Gradient Slide Left"
+ */
+
+.afy-hover-gradientslideleft {
+    position: relative;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+}
+.afy-hover-gradientslideleft:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin:0 100%;
+    transform-origin: 0 100%;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hovered.afy-hover-gradientslideleft:hover:before,
+.hovered.afy-hover-gradientslideleft:focus:before,
+.hovered.afy-hover-gradientslideleft:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+/* 
+ * Gradient Animations
+ * - Animatefy "Gradient Slide Right"
+ */
+
+.afy-hover-gradientslideright {
+    position: relative;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+}
+.afy-hover-gradientslideright:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin:0 100%;
+    transform-origin: 0 100%;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hovered.afy-hover-gradientslideright:hover:before,
+.hovered.afy-hover-gradientslideright:focus:before,
+.hovered.afy-hover-gradientslideright:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+/* 
+ * Gradient Animations
+ * - Animatefy "Gradient Slide Out"
+ */
+
+.afy-hover-gradientslideout {
+    position: relative;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+}
+.afy-hover-gradientslideout:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hovered.afy-hover-gradientslideout:hover:before,
+.hovered.afy-hover-gradientslideout:focus:before,
+.hovered.afy-hover-gradientslideout:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+/*
+ * - SCROLL ANIMATIONS 
+ *
+ */
+@keyframes scroll-top-fade {
+    0% {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-50px)
     }
-    100%{
+    100% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0)
     }
 }
 
-@keyframes scroll-fade-left{
-    0%{
+@keyframes scroll-fade-left {
+    0% {
         opacity: 0;
-        transform: translateX(500px);
+        transform: translateX(500px)
     }
-    80%{
+    80% {
         opacity: .7;
-        transform: translateX(-10px);
+        transform: translateX(-10px)
     }
-    100%{
+    100% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0)
     }
 }
 
-@keyframes scroll-fade-right{
-    0%{
+@keyframes scroll-fade-right {
+    0% {
         opacity: 0;
-        transform: translateX(-500px);
+        transform: translateX(-500px)
     }
-    80%{
+    80% {
         opacity: .7;
-        transform: translateX(10px);
+        transform: translateX(10px)
     }
-    100%{
+    100% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0)
     }
 }
 
-@keyframes scroll-hop{
-    0%{
-        transform:  rotate3d(0,0,0, 30deg)
+@keyframes scroll-hop {
+    0% {
+        transform: rotate3d(0, 0, 0, 30deg)
     }
-
-    50%{
-        transform: rotate3d(1,-2,0, 30deg) scale(1.1) skew(-10deg);
-        -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+    50% {
+        transform: rotate3d(1, -2, 0, 30deg) scale(1.1) skew(-10deg);
+        -webkit-box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, .75);
+        -moz-box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, .75);
+        box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, .75)
     }
-    
-    100%{
-        transform:  rotate3d(0,0,0, 30deg)
+    100% {
+        transform: rotate3d(0, 0, 0, 30deg)
     }
 }
 
-@keyframes scroll-twist{
-    0%{
+@keyframes scroll-twist {
+    0% {
         opacity: 0;
-        transform: scale(.7);
+        transform: scale(.7)
     }
-    
-    50%{
-        transform: rotate(720deg) scale(1.3);
+    50% {
+        transform: rotate(720deg) scale(1.3)
     }
-    
-    100%{
+    100% {
         opacity: 1;
-        transform: rotate(1440deg) scale(1);
+        transform: rotate(1440deg) scale(1)
     }
 }
 
-.go-sticky-nav{
+.go-sticky-nav {
     top: 0;
     position: fixed;
     right: 0;
-    left: 0;
-}
-.animatefy-fade{
-    animation: scroll-top-fade ease-in-out 0.3s 1 forwards;
+    left: 0
 }
 
-.animatefy-fade-left{
-    animation: scroll-fade-left ease-in-out 0.9s 1 forwards;
+.animatefy-fade {
+    animation: scroll-top-fade ease-in-out 0.3s 1 forwards
 }
 
-.animatefy-fade-right{
-    animation: scroll-fade-right ease-in-out 0.9s 1 forwards;
+.animatefy-fade-left {
+    animation: scroll-fade-left ease-in-out 0.9s 1 forwards
 }
 
-.animatefy-scroll-hop{
-    animation: scroll-hop ease-in-out 1s 1 forwards;
+.animatefy-fade-right {
+    animation: scroll-fade-right ease-in-out 0.9s 1 forwards
 }
 
-.animatefy-rotate{
-    animation: scroll-twist ease-out 2s 1 forwards;
+.animatefy-scroll-hop {
+    animation: scroll-hop ease-in-out 1s 1 forwards
+}
+
+.animatefy-rotate {
+    animation: scroll-twist ease-out 2s 1 forwards
+}
+
+.parallax-container {
+    overflow-y: hidden;
+    height: 70vh
+}
+
+.animatefy-parallax {
+    position: relative;
+    height: 100%;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+@media screen and (max-width:727px) {
+    .animatefy-parallax {
+        background-size: auto 100vh
+    }
+}
+
+.animatefy-parallax .caption {
+    position: relative;
+    top: 40%
+}
+
+.wrap {
+    animation: blinkTextCursor 500ms steps(44) infinite normal
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 1)
+    }
+    to {
+        border-right-color: transparent
+    }
 }
