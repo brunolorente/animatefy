@@ -1,111 +1,620 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>AnimatefyJS Sample demo</title>
-    <!-- Core styles -->
-    <link rel="stylesheet" href="../animatefy.css">
-    <!-- Demo styles -->
-    <link rel="stylesheet" href="css/demo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Animatefy, the lightweight web animation JS & CSS plugin</title>
+    <meta name="description" content="Animatefy is the easy to use lightweight JS and CSS plugin, free to use, and full of features in the world, are you ready to Animatefy your projects?">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../../animatefy.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 
 <body>
-    <main class="container">
-        <h1>
-            AnimatefyJS
+    <header class="bg-blue animatefy-sticky-nav">
+        <nav class="navbar">
+            <a href="index.php?page=0" class="title">
+                <strong><span class="c-lgray">Animate</span><span class="c-dgray">fy</span></strong>
+            </a>
+            <ul class="navigation">
+                <li>
+                    <a href="http://novadevs.com/animatefy/index.php?page=0" class="c-lgray fw700 ">HOME</a>
+                </li>
+                <li>
+                    <a href="http://novadevs.com/animatefy/download.php?page=1" class="c-lgray fw700 ">DOWNLOAD</a>
+                </li>
+                <li>
+                    <a href="http://novadevs.com/animatefy/installation.php?page=2" class="c-lgray fw700 ">INSTALLATION</a>
+                </li>
+                <li>
+                    <a href="http://novadevs.com/animatefy/howto.php?page=3" class="c-lgray fw700 active">DOC</a>
+                </li>
+                <li class="disabled">
+                    <a href="http://novadevs.com/animatefy/about.php?page=4" class="c-lgray fw700 ">THE PROJECT</a>
+                </li>
+                <li class="github-nav-counter">
+                    <a class="c-lgray fw700 github-button">
+                        <span>
+                            Github
+                        </span>
+                        <i class="fa fa-star  c-lgray"></i>
+                        <span id="stargazers"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- MAIN CONTENT -->
+    <section id="content-header" class="container">
+        <h1 class="text-center title">
+            <strong><span class="c-blue">Animate</span><span class="c-dblue">fy</span></strong>
         </h1>
-        <p class="animatefy-slide-left">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum itaque nostrum voluptatibus a ad vel eaque, quos assumenda est, deleniti repellendus molestias sint cum aspernatur ullam autem maxime tempore eius!
+        <h3 class="text-center c-gray fw400">
+            <strong>On Hover</strong> animations, <strong>On Scroll</strong> animations, <strong>and much more</strong> that you need for your websites in one single lightweight library
+        </h3>
+        <p class="text-center">
+            Entirelly written in CSS and pure JS, without jQuery, without any dependency, without headhaches.
         </p>
-        <p class="animatefy-slide-right">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum itaque nostrum voluptatibus a ad vel eaque, quos assumenda est, deleniti repellendus molestias sint cum aspernatur ullam autem maxime tempore eius!
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum itaque nostrum voluptatibus a ad vel eaque, quos assumenda est, deleniti repellendus molestias sint cum aspernatur ullam autem maxime tempore eius!
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum itaque nostrum voluptatibus a ad vel eaque, quos assumenda est, deleniti repellendus molestias sint cum aspernatur ullam autem maxime tempore eius!
-        </p>
-        <p class="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum itaque nostrum voluptatibus a ad vel eaque, quos assumenda est, deleniti repellendus molestias sint cum aspernatur ullam autem maxime tempore eius!
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum itaque nostrum voluptatibus a ad vel eaque, quos assumenda est, deleniti repellendus molestias sint cum aspernatur ullam autem maxime tempore eius!
-        </p>
-        <p class="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum itaque nostrum voluptatibus a ad vel eaque, quos assumenda est, deleniti repellendus molestias sint cum aspernatur ullam autem maxime tempore eius!
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum itaque nostrum voluptatibus a ad vel eaque, quos assumenda est, deleniti repellendus molestias sint cum aspernatur ullam autem maxime tempore eius!
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum itaque nostrum voluptatibus a ad vel eaque, quos assumenda est, deleniti repellendus molestias sint cum aspernatur ullam autem maxime tempore eius!
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum itaque nostrum voluptatibus a ad vel eaque, quos assumenda est, deleniti repellendus molestias sint cum aspernatur ullam autem maxime tempore eius!
-        </p>
-    </main>
+    </section><section id="git-promo" class="container">
+    <div class="row">
+        <div class="pull-left col-sm-12 col-xs-12">
+            <div class="box">
+                <div class="circle-img-wrap bg-blue">
+                    <i class="fa fa-file-text-o"></i>
+                </div>
+                <h2 class="header c-blue">
+                    How to's
+                </h2>
+                <p class="c-gray">
+                    Do you have some doubt about installation?
+                    <br> Don't worry, we have a great documentation!
+                </p>
+                <div class="text-center">
+                    <!--                    <a href="howto.html" class="cta1">Go to doc</a>-->
+                    <p class="fw700 c-gray">
+                        <span class="cta1">
+                            Comming soon...
+                        </span>
+                    </p>
 
-    <div class="container">
-        <p>
-            <code>
-                .animatefy-slide-left
-            </code>
-        </p>
-        <div class="box animatefy-slide-left">
-            Lorem ipsum dolor sit amet.
+                </div>
+            </div>
+        </div>
+        <div class="pull-right col-sm-12 col-xs-12">
+            <div class="box">
+                <div class="circle-img-wrap bg-blue">
+                    <i class="fa fa-github"></i>
+                </div>
+                <h2 class="header c-blue">
+                    GitHub
+                </h2>
+                <p class="c-gray">
+                    Do you want to know the code better? Do you want to modify the source code? Feel free to fork or download!
+                </p>
+                <div class="text-center">
+                    <a href="https://github.com/brunolorente/animatefy" class="cta1">Go to GitHub</a>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="clearfix"></div>
+</section>
 
-    <div class="container">
+<div id="banner-separator" class="bg-blue c-lgray">
+    <div class="container text-center">
+        <h3 class="header">Let's start!</h3>
         <p>
-            <code>
-                .animatefy-slide-right
-            </code>
+            Ready to upgrade your projects to the next level? Take a look at the following examples, you won't need anymore, simply a few lines of code to create beautiful effects!
         </p>
-        <div class="box animatefy-slide-right">
-            Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+<!-- FIXME classes -->
+<section id="hover-examples" class="container-fluid kindof">
+    <div class="wrapper">
+
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-blue fw600">
+                    Hover animations
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-gray fw400">
+                    Background Animations
+                </h2>
+                <div class="test-box hover-box bg-lblue afy-hover-slideright">Slide Right</div>
+                <div class="test-box hover-box bg-lblue afy-hover-slideleft">Slide Left</div>
+                <div class="test-box hover-box bg-lblue afy-hover-slideout">Slide Out</div>
+                <div class="test-box hover-box bg-lblue afy-hover-fade">Fade</div>
+                <div class="test-box hover-box bg-lblue afy-hover-angleout">Angle Out</div>
+
+
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header fw400">
+                    Explanation:
+                </h3>
+                <p>
+                    When you are going to use some animation, please, keep in mind: An effect’s class name is a lower case version of its name, prefixed by <b>afy-hover-</b>, in this case <b>.afy-hover-slideright</b> (the dot represents a class and the prefix makes the class name a little more unique so it’s not already in use). Where a name has a space in it, such as <b>Slide Right</b>, then the space is replaced with nothing, please, erase it, like so: <b>.afy-hover-slideright</b>. Remember, you need to use just <b>lowercase</b> letters.
+                </p>
+                <h3 class="header c-gray fw400">
+                    CSS Class:
+                </h3>
+                <span class="code">.afy-hover-slideright</span>
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    &lt;div class="afy-hover-slideright"&gt;
+                    <br>&nbsp;...<br> &lt;/div&gt;
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-gray fw400">
+                    2D Animations
+                </h2>
+                <div class="test-box hover-box bg-lblue afy-hover-skew">Skew</div>
+                <div class="test-box hover-box bg-lblue afy-hover-goup">Go Up</div>
+                <div class="test-box hover-box bg-lblue afy-hover-godown">Go Down</div>
+                <div class="test-box hover-box bg-lblue afy-hover-sneeze">Sneeze</div>
+                <div class="test-box hover-box bg-lblue afy-hover-sneezedown">Sneeze Down</div>
+
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header fw400">
+                    Explanation:
+                </h3>
+                <p>
+                    When you are going to use some animation, please, keep in mind: An effect’s class name is a lower case version of its name, prefixed by <b>afy-hover-</b>, in this case <b>.afy-hover-skew</b> (the dot represents a class and the prefix makes the class name a little more unique so it’s not already in use). Where a name has a space in it, such as <b>Go Up</b>, then the space is replaced with nothing, please, erase it, like so: <b>.afy-hover-goup</b>. Remember, you need to use just <b>lowercase</b> letters.
+                </p>
+                <h3 class="header c-gray fw400">
+                    CSS Example Class:
+                </h3>
+                <span class="code">.afy-hover-godown</span>
+
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    &lt;div class="afy-hover-skew"&gt;
+                    <br>&nbsp;...<br> &lt;/div&gt;
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-gray fw400">
+                    Gradient Animations
+                </h2>
+                <div class="test-box hover-box bg-lblue afy-hover-gradientfade" gradient-first-color="aquamarine" gradient-second-color="dodgerblue">Gradient Fade</div>
+                <div class="test-box hover-box bg-lblue afy-hover-gradientslideleft" gradient-first-color="aquamarine" gradient-second-color="dodgerblue">Gradient Right</div>
+                <div class="test-box hover-box bg-lblue afy-hover-gradientslideright" gradient-first-color="aquamarine" gradient-second-color="dodgerblue">Gradient Left</div>
+                <div class="test-box hover-box bg-lblue afy-hover-gradientslideout" gradient-first-color="aquamarine" gradient-second-color="dodgerblue">Gradient Inverse</div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header fw400">
+                    Explanation:
+                </h3>
+                <p>
+                    When you are going to use some animation, please, keep in mind: An effect’s class name is a lower case version of its name, prefixed by <b>afy-hover-</b>, in this case <b>.afy-hover-gradientfade</b> (the dot represents a class and the prefix makes the class name a little more unique so it’s not already in use). Where a name has a space in it, such as <b>Gradient Fade</b>, then the space is replaced with nothing, please, erase it, like so: <b>.afy-hover-gradientfade</b>. Remember, you need to use just <b>lowercase</b> letters. What about gradient <b>colors</b>? Don't worry you can establish them using <b>gradient-first-color=""</b>and <b>gradient-second-color=""</b> atributes, so you can use hex format or something you would use inside your CSS.
+                </p>
+                <h3 class="header c-gray fw400">
+                    CSS Example Class:
+                </h3>
+                <span class="code">.afy-hover-gradientfade</span>
+                <h3 class="header c-gray fw400">
+                    HTML attribute:
+                </h3>
+                <span class="code">gradient-first-color="aquamarine"</span>
+                <span class="code">gradient-second-color="dodgerblue"</span>
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    &lt;div class="afy-hover-gradientfade" gradient-first-color="aquamarine" gradient-second-color="dodgerblue"&gt;
+                    <br>&nbsp;...<br> &lt;/div&gt;
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-gray fw400">
+                    3D Animations
+                </h2>
+                <p>
+                    Comming soon...
+                </p>
+                <!--
+                <div class="test-box hover-box bg-lblue afy-hover-skew">Skew</div>
+                <div class="test-box hover-box bg-lblue afy-hover-goup">Go Up</div>
+                <div class="test-box hover-box bg-lblue afy-hover-godown">Go Down</div>
+                <div class="test-box hover-box bg-lblue afy-hover-sneeze">Sneeze</div>
+                <div class="test-box hover-box bg-lblue afy-hover-sneezedown">Sneeze Down</div>
+-->
+            </div>
+            <!--
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header fw400">
+                    Explanation:
+                </h3>
+                <p>
+                    When you are going to use some animation, please, keep in mind: An effect’s class name is a lower case version of its name, prefixed by <b>afy-hover-</b>, in this case <b>.afy-hover-skew</b> (the dot represents a class and the prefix makes the class name a little more unique so it’s not already in use). Where a name has a space in it, such as <b>Go Up</b>, then the space is replaced with nothing, please, erase it, like so: <b>.afy-hover-goup</b>. Remember, you need to use just <b>lowercase</b> letters.
+                </p>
+                <h3 class="header c-gray fw400">
+                    CSS Example Class:
+                </h3>
+                <span class="code">.afy-hover-godown</span>
+                
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    &lt;div class="afy-hover-skew"&gt;
+                    <br>&nbsp;...<br> &lt;/div&gt;
+                </p>
+            </div>
+-->
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-gray fw400">
+                    Icon Animation
+                </h2>
+                <p>
+                    Comming soon...
+                </p>
+                <!--
+                <div class="test-box hover-box bg-lblue afy-hover-skew">Skew</div>
+                <div class="test-box hover-box bg-lblue afy-hover-goup">Go Up</div>
+                <div class="test-box hover-box bg-lblue afy-hover-godown">Go Down</div>
+                <div class="test-box hover-box bg-lblue afy-hover-sneeze">Sneeze</div>
+                <div class="test-box hover-box bg-lblue afy-hover-sneezedown">Sneeze Down</div>
+-->
+            </div>
+            <!--
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header fw400">
+                    Explanation:
+                </h3>
+                <p>
+                    When you are going to use some animation, please, keep in mind: An effect’s class name is a lower case version of its name, prefixed by <b>afy-hover-</b>, in this case <b>.afy-hover-skew</b> (the dot represents a class and the prefix makes the class name a little more unique so it’s not already in use). Where a name has a space in it, such as <b>Go Up</b>, then the space is replaced with nothing, please, erase it, like so: <b>.afy-hover-goup</b>. Remember, you need to use just <b>lowercase</b> letters.
+                </p>
+                <h3 class="header c-gray fw400">
+                    CSS Example Class:
+                </h3>
+                <span class="code">.afy-hover-godown</span>
+                
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    &lt;div class="afy-hover-skew"&gt;
+                    <br>&nbsp;...<br> &lt;/div&gt;
+                </p>
+            </div>
+-->
         </div>
     </div>
+</section>
+<section id="scroll-examples" class="container-fluid kindof">
+    <div class="wrapper">
 
-    <div class="container">
-        <p>
-            <code>
-                .animatefy-scroll-jump
-            </code>
-        </p>
-        <div class="box animatefy-scroll-jump">
-            Lorem ipsum dolor sit amet.
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h2 class="header c-blue fw600">
+                    Scroll animations
+                </h2>
+                <p>
+                    Technically, the Animatefy engine detects what elements are setted up with their classes like .animatefy-slide-left and genetates event listeners that detect the exactly moment that user sees for first time the element. Just in time, the animation is trigered and the user starts to love your website. Don't be afraid, you just need to follow the <a href="installation.php?page=2">installation instructions</a> and then, to emulate the instructions from the right side (or bellow if you are reading this from small screen :D)
+                </p>
+            </div>
         </div>
-        <p>
-            <code>
-                .animatefy-scroll-jump animatefy-delay="500"
-            </code>
-        </p>
-        <div class="box animatefy-scroll-jump" animatefy-delay="500">
-            Lorem ipsum dolor sit amet.
+
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-gray fw400">
+                    Slide left
+                </h2>
+                <div class="test-box bg-lblue animatefy-slide-left"></div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header c-gray fw400">
+                    CSS Class:
+                </h3>
+                <span class="code">.animatefy-slide-left</span>
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    &lt;div class="animatefy-slide-left"&gt;
+                    <br>&nbsp;...<br> &lt;/div&gt;
+                </p>
+            </div>
+            <button id="animatefy-fade-left" class="cta1">
+                <i class="fa fa-refresh fa-spin"></i>
+            </button>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-gray fw400">
+                    Slide right
+                </h2>
+                <div class="test-box bg-lblue animatefy-slide-right"></div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header c-gray fw400">
+                    CSS Class:
+                </h3>
+                <span class="code">.animatefy-slide-right</span>
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    &lt;div class="animatefy-slide-right"&gt;
+                    <br>&nbsp;...<br> &lt;/div&gt;
+                </p>
+            </div>
+            <button id="animatefy-fade-right" class="cta1">
+                <i class="fa fa-refresh fa-spin"></i>
+            </button>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-gray fw400">
+                    Scroll hop
+                </h2>
+                <div class="test-box bg-lblue animatefy-scroll-jump pull-left">
+                </div>
+                <div class="test-box bg-lblue animatefy-scroll-jump pull-left" animatefy-delay="100">
+                </div>
+                <div class="test-box bg-lblue animatefy-scroll-jump pull-left" animatefy-delay="250">
+                </div>
+                <button id="animatefy-scroll-hop" class="cta1">
+                    <i class="fa fa-refresh fa-spin"></i>
+                </button>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header c-gray fw400">
+                    CSS Class:
+                </h3>
+                <span class="code">.animatefy-scroll-jump</span>
+                <h3 class="header c-gray fw400">
+                    HTML attribute:
+                </h3>
+                <span class="code">animatefy-delay="250"</span>
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    &lt;div class="animatefy-scroll-jump"&gt;
+                    <br>&nbsp;...<br> &lt;/div&gt;
+                    <br> &lt;div class="animatefy-scroll-jump" animatefy-delay="100"&gt;
+                    <br>&nbsp;...<br> &lt;/div&gt;
+                    <br> &lt;div class="animatefy-scroll-jump" animatefy-delay="200"&gt;
+                    <br>&nbsp;...<br> &lt;/div&gt;
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-gray fw400">
+                    Scroll rotate
+                </h2>
+                <div class="test-box bg-lblue animatefy-scroll-rotate pull-left">
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header c-gray fw400">
+                    CSS Class:
+                </h3>
+                <span class="code">.animatefy-scroll-rotate</span>
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    &lt;div class="animatefy-scroll-rotate"&gt;
+                    <br>&nbsp;...<br> &lt;/div&gt;
+                </p>
+            </div>
+        </div>
+        <button id="animatefy-rotate" class="cta1">
+            <i class="fa fa-refresh fa-spin"></i>
+        </button>
+    </div>
+</section>
+
+<section id="parallax-examples" class="container-fluid kindof">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-blue fw600">
+                    Parallax
+                </h2>
+                <p>
+                    No worries, create a parallax effect never was so easy, the Animatefy engine makes the magic for you. You just need to follow the following steps:
+                </p>
+                <ol>
+                    <li>
+                        <a href="installation.php?page=2">Install Animatefy inside your website</a>
+                    </li>
+                    <li>
+                        Copy the sample code
+                    </li>
+                    <li>
+                        Enjoy your new full responsive parallax
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    &lt;div class="parallax-container"&gt;<br> &nbsp;&lt;div class="animatefy-parallax"&gt;<br> &nbsp;&nbsp;&lt;p class="caption"&gt;<br> &nbsp;&nbsp;&nbsp;Animatefy Parallax!<br> &nbsp;&nbsp;&lt;/p&gt;
+                    <br> &nbsp;&lt;/div&gt;
+                    <br> &lt;/div&gt;
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="parallax-container">
+                    <div class="animatefy-parallax">
+                        <p class="caption">
+                            Animatefy Parallax!
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
-    <div class="container">
-        <p>
-            <code>
-                .animatefy-scroll-rotate
-            </code>
-        </p>
-        <div class="box animatefy-scroll-rotate">
-            Lorem ipsum dolor sit amet.
+<section id="typer-examples" class="container-fluid kindof">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-blue fw600">
+                    Typer
+                </h2>
+                <p>
+                    Would you like to do this? You just need to copy and paste the sample code and enjoy it. I think that you want to chenge the text (just for the lulz). Easy, edit the <b>data-type="" attribute</b> and set the text what you want, remember, you just to write your text inside <b>[" "]</b>
+                </p>
+                <div class="test-box bg-lblue typer">
+                    <h3>
+                        <a href="" class="animatefy-typer" data-period="1" data-type='[ "What the f*ck?" ]'>
+                                <span class="wrap anim-typewriter"></span>
+                            </a>
+                    </h3>
+                    <h3>
+                        <a href="" class="animatefy-typer" data-period="2000" data-type='[ "What the f*ck?" ]'>
+                                <span class="wrap anim-typewriter"></span>
+                            </a>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header c-gray fw400">
+                    CSS Class:
+                </h3>
+                <span class="code">.anymatefy-typer</span>
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    <!--                    &lt;div&gt;<br> &nbsp;&lt;h3&gt;-->
+                    <br>
+                    <!--&nbsp;&nbsp;-->&lt;a href="" class="animatefy-typer" data-period="1" data-type='[ "What the f*ck?" ]'&gt;<br> &nbsp;&nbsp;&nbsp;&lt;span class="wrap anim-typewriter"&gt;&lt;/span&gt;<br>
+                    <!--&nbsp;&nbsp;-->&lt;/a&gt;
+                    <!--                    <br> &nbsp;&lt;/h3&gt;-->
+                    <!--                    <br> &nbsp;&lt;h3&gt;-->
+                    <br>
+                    <!--&nbsp;&nbsp;-->&lt;a href="" class="animatefy-typer" data-period="20" data-type='[ "What the f*ck?" ]'&gt;<br> &nbsp;&nbsp;&nbsp;&lt;span class="wrap anim-typewriter"&gt;&lt;/span&gt;<br>
+                    <!--&nbsp;&nbsp;-->&lt;/a&gt;
+                    <!--                    <br> &nbsp;&lt;/h3&gt;-->
+                    <!--                    <br> &lt;/div&gt;-->
+                </p>
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- Core JS -->
-    <script src="../animatefy.js"></script>
-    <script>
-        (function() {
-            Animatefy.init();
-        })();
-    </script>
+<section id="writer-examples" class="container-fluid kindof">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <h2 class="header c-blue fw600">
+                    Writer
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, consectetur dignissimos eius culpa dolor ullam natus quos. Quaerat obcaecati harum, fuga animi atque consectetur tempora rerum ex corporis et expedita!
+                </p>
+                <div class="container no-gutter animatefy-drawings" text="Go further!!!"></div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="header c-gray fw400">
+                    CSS Class:
+                </h3>
+                <span class="code">.animatefy-drawings</span>
+                <h3 class="header c-gray fw400">
+                    HTML attribute:
+                </h3>
+                <span class="code">text="Go further!!!"</span>
+                <h3 class="header c-gray fw400">
+                    Sample code:
+                </h3>
+                <p class="code">
+                    &lt;div class="animatefy-drawings" text="Go further!!!"&gt;
+                    <br>&nbsp;...
+                    <br>&lt;/div&gt;
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dblue">
+    <p>
+        <a href="https://novadevs.com" class="c-lgray" target="_blank" title="Diseño web Zaragoza"><img src="assets/img/logo-novadevs.png" alt="Diseño web Zaragoza" width="150"></a>
+    </p>
+    <p class="c-lgray">
+        <a href="https://novadevs.com" class="cta1">Made with <span class="heartbeat-footer"><i class="fa fa-heart c-lblue"></i></span> by Bruno Lorente</a>
+    </p>
+</footer>
+
+<script src="../../animatefy.js"></script>
+<script>
+    (function() {
+        Animatefy.settings = {
+            hoverAnimations: true,
+            scrollAnimations: true,
+            parallax: true
+        }
+        Animatefy.init();
+    })();
+</script>
+<script src="js/scripts.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function() {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
 </body>
 
 </html>
